@@ -1,13 +1,17 @@
+
+# wp-content
+public/app/backups/
+public/app/cache/
+public/app/plugins/*
+public/app/upgrade/*
+public/app/uploads/*
+
+# log files
 *.log
-.htaccess
-sitemap.xml
-sitemap.xml.gz
-wp-config.php
-wp-content/advanced-cache.php
-wp-content/backup-db/
-wp-content/backups/
-wp-content/blogs.dir/
-wp-content/cache/
-wp-content/upgrade/
-wp-content/uploads/
-wp-content/wp-cache-config.php
+
+# config files
+config/*
+!config/defaults.php
+!config/example-com.php
+!config/example-dev.php
+!config/staging-example-com.php
