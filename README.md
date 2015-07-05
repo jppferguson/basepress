@@ -5,15 +5,16 @@ A semi-sane boilerplate for [WordPress] sites where you don't need to, or can't 
 
 
 ## Directory Structure
-
+```
   /config      # base configuration
   /public      # public webroot
   /public/wp   # wordpress core
-
+```
 
 ## Getting Started
-• Install the latest version of Wordpress to public/wp/
-• Update your config files and rename to match your host name
+  - Fork / Clone
+  - Rename example /config files to match your host names
+  - Update example /config files with the right database settings etc
 
 
 
