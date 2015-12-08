@@ -15,7 +15,12 @@ $webroot_dir = $root_dir . $webroot_dir;
 
 // ** Environment ** //
 if( !defined('WP_ENV') ) define('WP_ENV', 'default');
-
+$envs = array(
+  'development' => 'http://example.dev',
+  'staging'     => 'http://staging.example.com',
+  'production'  => 'http://example.com'
+);
+define('ENVIRONMENTS', serialize($envs));
 
 /** Database settings. Set to something so WP doesn't try to run install */
 if( !defined('DB_USER') )     define('DB_USER',     'not_set');
@@ -84,6 +89,11 @@ if( !defined('WP_HOME') )    define('WP_HOME',    'http://' . $_SERVER['HTTP_HOS
 if( !defined('CONTENT_DIR') )    define('CONTENT_DIR',   '/app');
 if( !defined('WP_CONTENT_DIR') ) define('WP_CONTENT_DIR', $webroot_dir . CONTENT_DIR);
 if( !defined('WP_CONTENT_URL') ) define('WP_CONTENT_URL',   CONTENT_DIR);
+
+/**
+ * Must Use plugins
+ */
+if( !defined('WPMU_PLUGIN_DIR') ) define('WPMU_PLUGIN_DIR', WP_CONTENT_DIR . '/mu-plugins');
 
 
 /**

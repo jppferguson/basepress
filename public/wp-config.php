@@ -7,15 +7,20 @@
 
 $host_config_dir  = dirname(__FILE__) . '/../config/';
 $host_config_file = $host_config_dir . preg_replace("/[^a-z0-9]+/", "-", strtolower($_SERVER['HTTP_HOST'])) . ".php";
+$defaults_file    = $host_config_dir . "defaults.php";
 
 /** Include the host-specific config file if it exists. */
 if (file_exists($host_config_file))
-	require_once($host_config_file);
+  require_once($host_config_file);
+
+/** Include the default fallbacks file. */
+if (file_exists($defaults_file))
+  require_once($defaults_file);
 
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+  define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

@@ -15,6 +15,7 @@ A semi-sane boilerplate for [WordPress] sites where you don't need to, or can't 
   - Fork / Clone
   - Rename example /config files to match your host names
   - Update example /config files with the right database settings etc
+  - (Optional) Update /config/defaults.php environments array with the correct environment urls
 
 
 
