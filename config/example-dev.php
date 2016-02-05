@@ -13,9 +13,9 @@ define('WP_ENV', 'development');
 
 // ** MySQL settings ** //
 define('DB_NAME',     'database_name');
-define('DB_USER',     'database_usename');
+define('DB_USER',     'database_username');
 define('DB_PASSWORD', 'database_password');
-define('DB_HOST',     'localhost');
+define('DB_HOST',     '127.0.0.1');
 
 // ** Generate at: https://api.wordpress.org/secret-key/1.1/salt/ ** //
 define('AUTH_KEY',         'put your unique phrase here');
