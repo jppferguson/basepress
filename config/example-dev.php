@@ -37,4 +37,4 @@ define('SAVEQUERIES',      true); // Displays queries in the footer
 define('DISALLOW_FILE_EDIT', false);
 
 // ** Force filesystem method - set this if plugin installs don't work ** //
-// define('FS_METHOD', 'direct');
+define('FS_METHOD', 'direct');
