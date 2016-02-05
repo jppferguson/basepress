@@ -25,9 +25,10 @@ if ( !defined('ABSPATH') )
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
 
-/** Fix for connection errors on localhost. */
+/** Fix for connection errors on localhost because of sluggish internet. */
 if( WP_ENV == 'development' ) {
-  add_filter( 'http_api_transports', function() {
-    return array( 'streams' );
-  });
+  add_filter( 'http_request_args', function( $r ) {
+    $r['timeout'] = max( $r['timeout'], 10 );
+    return $r;
+ } );
 }
